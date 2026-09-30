@@ -44,6 +44,7 @@ export default function BookCard({
       <div className="relative w-full sm:w-44 h-56 sm:h-auto shrink-0 bg-gray-100 dark:bg-zinc-800 flex items-center justify-center p-3 overflow-hidden">
         {book.thumbnail && !imageError ? (
           <Image
+            fill
             src={book.thumbnail}
             alt={book.title}
             onError={() => setImageError(true)}

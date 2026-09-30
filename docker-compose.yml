@@ -23,9 +23,11 @@ services:
     ports:
       - "3000:3000"
     env_file:
-      - .env.local
+      - .env
     environment:
       MONGO_URI: mongodb://mongo:27017/buku
+      WATCHPACK_POLLING: "true"
+      CHOKIDAR_USEPOLLING: "true"
     volumes:
       - ./:/app
       - web_node_modules:/app/node_modules
